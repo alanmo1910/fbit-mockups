@@ -1,0 +1,188 @@
+<!-- Hallmark · macrostructure: Long Document · theme: institutional-balear-B
+     page: project detail ([Nom del projecte]) -->
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Nom del projecte] — Fundació BIT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--font-display:"DM Serif Display",ui-serif,Georgia,serif;--font-body:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;--font-mono:"Space Mono",ui-monospace,monospace;--color-paper:oklch(99% 0.003 220);--color-paper-alt:oklch(96% 0.006 220);--color-ink:oklch(20% 0.02 220);--color-ink-2:oklch(42% 0.015 220);--color-ink-3:oklch(58% 0.01 220);--color-accent:oklch(48% 0.16 220);--color-accent-hover:oklch(42% 0.16 220);--color-accent-soft:oklch(94% 0.03 220);--color-rule:oklch(90% 0.008 220);--color-focus:oklch(48% 0.16 220);--color-dark:oklch(22% 0.025 220);--space-xs:4px;--space-sm:8px;--space-md:16px;--space-lg:24px;--space-xl:32px;--space-2xl:48px;--space-3xl:64px;--space-4xl:96px;--text-xs:0.75rem;--text-sm:0.875rem;--text-base:1rem;--text-lg:1.125rem;--text-xl:1.25rem;--text-2xl:1.5rem;--text-3xl:2rem;--text-display:clamp(2rem,4vw,2.75rem);--ease-out:cubic-bezier(0.22,1,0.36,1);--dur-fast:120ms;--dur-med:200ms;--radius-sm:4px;--radius-md:8px}
+*,*::before,*::after{box-sizing:border-box;margin:0}html{overflow-x:clip;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);color:var(--color-ink);background:var(--color-paper);line-height:1.6}
+a{color:inherit;text-decoration:none}h1,h2,h3{font-family:var(--font-display);font-weight:400;font-style:normal;line-height:1.15}
+
+/* Util + Nav (same as portada) */
+.util-bar{background:var(--color-dark);font-size:var(--text-xs);color:oklch(70% 0.01 220)}.util-inner{max-width:1240px;margin:0 auto;padding:6px var(--space-lg);display:flex;align-items:center;justify-content:space-between}.util-portals{display:flex;gap:var(--space-sm);align-items:center}.util-portals span{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:oklch(55% 0.01 220);margin-right:var(--space-sm)}.p-pill{font-size:0.7rem;font-weight:500;padding:2px 10px;border-radius:100px}.p-pill--on{background:var(--color-accent);color:white}.p-pill--off{background:oklch(28% 0.02 220);color:oklch(68% 0.01 220)}.lang{font-family:var(--font-mono);font-size:0.65rem;padding:2px 5px;border-radius:3px;color:oklch(60% 0.01 220)}.lang--on{color:white;background:oklch(32% 0.02 220)}
+.mega-nav{background:white;border-bottom:1px solid var(--color-rule);position:sticky;top:0;z-index:40}.mega-inner{max-width:1240px;margin:0 auto;padding:0 var(--space-lg);display:flex;align-items:center;justify-content:space-between;height:64px}.brand{display:flex;align-items:center;gap:var(--space-md)}.brand-icon{width:36px;height:36px;background:var(--color-accent);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center}.brand-icon svg{width:20px;height:20px;color:white}.brand-text h2{font-family:var(--font-display);font-size:var(--text-xl);line-height:1.1}.brand-text small{font-family:var(--font-mono);font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-ink-3)}.nav-links{display:flex;align-items:center;gap:var(--space-xl)}.nav-links a{font-size:var(--text-sm);font-weight:500;color:var(--color-ink-2)}.nav-links a:hover{color:var(--color-ink)}.nav-links a.active{color:var(--color-accent)}.nav-cta{font-size:var(--text-sm);font-weight:600;background:var(--color-accent);color:white;padding:8px 20px;border:none;border-radius:var(--radius-sm);cursor:pointer}
+
+/* Breadcrumb */
+.crumb{background:var(--color-paper-alt);border-bottom:1px solid var(--color-rule);padding:var(--space-md) 0}
+.crumb-inner{max-width:1240px;margin:0 auto;padding:0 var(--space-lg);font-size:var(--text-sm);color:var(--color-ink-3);display:flex;align-items:center;gap:var(--space-sm)}
+.crumb a{color:var(--color-ink-3)}.crumb a:hover{color:var(--color-accent)}
+.crumb svg{width:12px;height:12px;flex-shrink:0}
+.crumb .current{color:var(--color-ink);font-weight:500}
+
+/* Project page */
+.project{max-width:1240px;margin:0 auto;padding:var(--space-3xl) var(--space-lg)}
+.project-grid{display:grid;grid-template-columns:1fr 320px;gap:var(--space-3xl)}
+
+/* Main column */
+.proj-img{aspect-ratio:16/9;background:var(--color-accent);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-xl)}
+.proj-img span{font-family:var(--font-display);font-size:var(--text-display);color:white;text-align:center;padding:var(--space-lg)}
+.proj-tags{display:flex;flex-wrap:wrap;gap:var(--space-sm);margin-bottom:var(--space-lg)}
+.proj-tag{font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em;background:var(--color-accent-soft);color:var(--color-accent);padding:4px 10px;border-radius:var(--radius-sm)}
+.proj-main h1{font-size:var(--text-display);margin-bottom:var(--space-lg)}
+.proj-body{max-width:65ch}
+.proj-body p{color:var(--color-ink-2);line-height:1.7;margin-bottom:var(--space-lg)}
+.proj-body h2{font-size:var(--text-2xl);margin:var(--space-2xl) 0 var(--space-lg);color:var(--color-ink)}
+.proj-body ul{list-style:none;padding:0;margin-bottom:var(--space-xl)}
+.proj-body li{display:flex;align-items:start;gap:var(--space-sm);padding:var(--space-sm) 0;color:var(--color-ink-2);font-size:var(--text-base)}
+.proj-body li svg{width:18px;height:18px;color:var(--color-accent);flex-shrink:0;margin-top:3px}
+
+/* Docs */
+.doc-link{display:flex;align-items:center;gap:var(--space-md);padding:var(--space-md);background:var(--color-paper-alt);border:1px solid var(--color-rule);border-radius:var(--radius-sm);margin-bottom:var(--space-sm);transition:border-color var(--dur-fast) var(--ease-out)}
+.doc-link:hover{border-color:var(--color-accent)}
+.doc-icon{width:36px;height:36px;background:white;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.doc-icon svg{width:18px;height:18px;color:oklch(50% 0.15 15)}
+.doc-text strong{font-size:var(--text-sm);font-weight:600;display:block;color:var(--color-ink)}
+.doc-text span{font-size:var(--text-xs);color:var(--color-ink-3)}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-sm);margin:var(--space-xl) 0}
+.gallery div{aspect-ratio:4/3;background:var(--color-paper-alt);border-radius:var(--radius-sm);border:1px solid var(--color-rule)}
+
+/* Share */
+.share{display:flex;align-items:center;gap:var(--space-sm);padding-top:var(--space-xl);border-top:1px solid var(--color-rule);margin-top:var(--space-xl)}
+.share span{font-size:var(--text-sm);color:var(--color-ink-3);margin-right:var(--space-sm)}
+.share a{width:32px;height:32px;background:var(--color-paper-alt);border:1px solid var(--color-rule);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-ink-3);transition:all var(--dur-fast) var(--ease-out)}
+.share a:hover{background:var(--color-accent);color:white;border-color:var(--color-accent)}
+
+/* Sidebar */
+.sidebar{display:flex;flex-direction:column;gap:var(--space-xl)}
+.card{border:1px solid var(--color-rule);border-radius:var(--radius-md);overflow:hidden}
+.card-head{font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-ink-3);padding:var(--space-lg) var(--space-lg) 0}
+.card-body{padding:var(--space-md) var(--space-lg) var(--space-lg)}
+.card-row{display:flex;justify-content:space-between;padding:var(--space-sm) 0;border-bottom:1px solid var(--color-rule);font-size:var(--text-sm)}
+.card-row:last-child{border-bottom:none}
+.card-row dt{color:var(--color-ink-3)}
+.card-row dd{font-weight:600;color:var(--color-ink);text-align:right}
+.card-row .badge{font-family:var(--font-mono);font-size:0.6rem;background:oklch(92% 0.04 155);color:oklch(35% 0.1 155);padding:2px 8px;border-radius:100px}
+
+.card-cta{background:var(--color-accent-soft);border:1px solid oklch(88% 0.04 220);border-radius:var(--radius-md);padding:var(--space-lg)}
+.card-cta h3{font-family:var(--font-body);font-size:var(--text-sm);font-weight:700;color:var(--color-accent);margin-bottom:var(--space-xs)}
+.card-cta p{font-size:var(--text-sm);color:var(--color-ink-2);margin-bottom:var(--space-md)}
+.card-cta a{display:block;text-align:center;font-size:var(--text-sm);font-weight:600;background:var(--color-accent);color:white;padding:10px;border-radius:var(--radius-sm)}
+.card-cta a:hover{background:var(--color-accent-hover)}
+
+.related-item{display:flex;align-items:center;gap:var(--space-md);padding:var(--space-sm) 0}
+.related-item:hover h4{color:var(--color-accent)}
+.related-dot{width:40px;height:40px;border-radius:var(--radius-sm);flex-shrink:0}
+.related-item h4{font-family:var(--font-body);font-size:var(--text-sm);font-weight:600}
+.related-item p{font-size:var(--text-xs);color:var(--color-ink-3)}
+.related-news{font-size:var(--text-sm);font-weight:600;color:var(--color-ink);display:block;padding:var(--space-sm) 0;line-height:1.4}
+.related-news:hover{color:var(--color-accent)}
+.related-news time{font-family:var(--font-mono);font-size:0.6rem;color:var(--color-ink-3);display:block;margin-top:2px;font-weight:400}
+
+/* Chat */
+.chat-btn{position:fixed;bottom:var(--space-xl);right:var(--space-xl);z-index:50;width:50px;height:50px;border-radius:50%;background:var(--color-accent);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px oklch(0% 0 0 / 0.12)}.chat-btn:hover{transform:scale(1.05)}.chat-btn svg{width:22px;height:22px}
+
+@media(max-width:768px){.project-grid{grid-template-columns:1fr}.nav-links{display:none}.gallery{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div class="util-bar"><div class="util-inner"><div class="util-portals"><span>Ecosistema</span><a href="01_portada_multisite.html" class="p-pill p-pill--on">Fundaci&oacute; BIT</a><a href="#" class="p-pill p-pill--off">ParcBIT</a><a href="#" class="p-pill p-pill--off">CentreBIT</a><a href="#" class="p-pill p-pill--off">EmprenBIT</a></div><div style="display:flex;gap:8px"><a href="#" class="lang lang--on">CA</a><a href="#" class="lang">ES</a><a href="#" class="lang">EN</a></div></div></div>
+
+<header class="mega-nav"><div class="mega-inner"><div class="brand"><div class="brand-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="brand-text"><h2>Fundaci&oacute; BIT</h2><small>Balears Innovation &amp; Technology</small></div></div><nav class="nav-links"><a href="01_portada_multisite.html">Inici</a><a href="#">Qui som</a><a href="#">Serveis</a><a href="#" class="active">Projectes</a><a href="03_noticies_events.html">Actualitat</a><a href="#">Transpar&egrave;ncia</a><button class="nav-cta">Contacte</button></nav></div></header>
+
+<div class="crumb"><div class="crumb-inner"><a href="01_portada_multisite.html">Inici</a><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><a href="#">Projectes</a><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg><span class="current">[Nom del projecte]</span></div></div>
+
+<section class="project">
+  <div class="project-grid">
+    <div>
+      <div class="proj-img"><span style="font-family:var(--font-mono);font-size:var(--text-xs);color:oklch(85% 0.02 220);text-transform:uppercase;letter-spacing:0.08em">Fotografia del projecte</span></div>
+      <div class="proj-tags">
+        <span class="proj-tag">Intel&middot;lig&egrave;ncia Artificial</span>
+        <span class="proj-tag">An&agrave;lisi de dades</span>
+        <span class="proj-tag">Turisme</span>
+        <span class="proj-tag">Medi ambient</span>
+      </div>
+      <div class="proj-main">
+        <h1>[Nom del projecte]: IA i an&agrave;lisi de dades per a la gesti&oacute; tur&iacute;stica i mediambiental</h1>
+        <div class="proj-body">
+          <p>[Nom del projecte] &eacute;s un projecte estrat&egrave;gic amb un pressupost de 4,6 milions d'euros, desenvolupat en col&middot;laboraci&oacute; amb [Soci tecnol&ograve;gic], que aplica intel&middot;lig&egrave;ncia artificial i an&agrave;lisi avan&ccedil;ada de dades per millorar la gesti&oacute; tur&iacute;stica, mediambiental i de serveis p&uacute;blics a les Illes Balears.</p>
+          <p>El projecte va ser presentat al 4YFN / Mobile World Congress de Barcelona, on va despertar un gran inter&egrave;s per la seva capacitat d'integrar dades de m&uacute;ltiples fonts per generar coneixement accionable.</p>
+
+          <h2>Objectius</h2>
+          <ul>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Desenvolupar models predictius per a la gesti&oacute; del flux tur&iacute;stic</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Crear eines d'an&agrave;lisi mediambiental basades en dades en temps real</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Optimitzar la prestaci&oacute; de serveis p&uacute;blics mitjan&ccedil;ant IA</li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Establir un marc &egrave;tic per a l'&uacute;s de la IA al sector p&uacute;blic</li>
+          </ul>
+
+          <h2>Documentaci&oacute;</h2>
+          <a href="#" class="doc-link">
+            <div class="doc-icon"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/></svg></div>
+            <div class="doc-text"><strong>Mem&ograve;ria t&egrave;cnica del projecte</strong><span>PDF, 2.4 MB</span></div>
+          </a>
+          <a href="#" class="doc-link">
+            <div class="doc-icon"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/></svg></div>
+            <div class="doc-text"><strong>Presentaci&oacute; 4YFN Barcelona</strong><span>PDF, 5.1 MB</span></div>
+          </a>
+
+          <h2>Galeria</h2>
+          <div class="gallery"><div></div><div></div><div></div></div>
+
+          <div class="share">
+            <span>Compartir:</span>
+            <a href="#">X</a><a href="#">Li</a><a href="#">Fb</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="card">
+        <div class="card-head">Fitxa del projecte</div>
+        <div class="card-body">
+          <dl>
+            <div class="card-row"><dt>Estat</dt><dd><span class="badge">Actiu</span></dd></div>
+            <div class="card-row"><dt>Pressupost</dt><dd>[Import] &euro;</dd></div>
+            <div class="card-row"><dt>&Agrave;rea</dt><dd>Innovaci&oacute;</dd></div>
+            <div class="card-row"><dt>Inici</dt><dd>2025</dd></div>
+            <div class="card-row"><dt>Soci</dt><dd>[Soci tecnol&ograve;gic]</dd></div>
+            <div class="card-row"><dt>Ubicaci&oacute;</dt><dd>Illes Balears</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="card-cta">
+        <h3>&Agrave;rea responsable</h3>
+        <p>Projectes R+D+i i Comunicaci&oacute;</p>
+        <a href="#">Contactar</a>
+      </div>
+
+      <div>
+        <div class="card-head" style="padding:0 0 var(--space-md)">Projectes relacionats</div>
+        <a href="#" class="related-item"><div class="related-dot" style="background:var(--color-centrebit)"></div><div><h4>DIHBAI-TUR</h4><p>IA en turisme i agroaliment&agrave;ria</p></div></a>
+        <a href="#" class="related-item"><div class="related-dot" style="background:var(--color-emprenbit)"></div><div><h4>Factor&iacute;a d'Innovaci&oacute;</h4><p>Diagn&ograve;stics i plans per a PYMEs</p></div></a>
+        <a href="#" class="related-item"><div class="related-dot" style="background:var(--color-accent)"></div><div><h4>Talaia</h4><p>Supercomputador a la UIB</p></div></a>
+      </div>
+
+      <div>
+        <div class="card-head" style="padding:0 0 var(--space-md)">Not&iacute;cies relacionades</div>
+        <a href="#" class="related-news">[Nom del projecte] es presenta al 4YFN de Barcelona<time>mar 2026</time></a>
+        <a href="#" class="related-news">[Soci tecnol&ograve;gic] i Fundaci&oacute; BIT signen l'acord<time>gen 2026</time></a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<button class="chat-btn" aria-label="Obrir assistent virtual"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></button>
+</body>
+</html>

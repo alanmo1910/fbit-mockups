@@ -1,0 +1,191 @@
+<!-- Hallmark · macrostructure: Catalogue · theme: institutional-balear-B
+     page: news + events listing -->
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actualitat — Fundació BIT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--font-display:"DM Serif Display",ui-serif,Georgia,serif;--font-body:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;--font-mono:"Space Mono",ui-monospace,monospace;--color-paper:oklch(99% 0.003 220);--color-paper-alt:oklch(96% 0.006 220);--color-ink:oklch(20% 0.02 220);--color-ink-2:oklch(42% 0.015 220);--color-ink-3:oklch(58% 0.01 220);--color-accent:oklch(48% 0.16 220);--color-accent-hover:oklch(42% 0.16 220);--color-accent-soft:oklch(94% 0.03 220);--color-parcbit:oklch(52% 0.13 155);--color-centrebit:oklch(48% 0.1 290);--color-emprenbit:oklch(58% 0.14 65);--color-rule:oklch(90% 0.008 220);--color-focus:oklch(48% 0.16 220);--color-dark:oklch(22% 0.025 220);--space-xs:4px;--space-sm:8px;--space-md:16px;--space-lg:24px;--space-xl:32px;--space-2xl:48px;--space-3xl:64px;--space-4xl:96px;--text-xs:0.75rem;--text-sm:0.875rem;--text-base:1rem;--text-lg:1.125rem;--text-xl:1.25rem;--text-2xl:1.5rem;--text-3xl:2rem;--ease-out:cubic-bezier(0.22,1,0.36,1);--dur-fast:120ms;--dur-med:200ms;--radius-sm:4px;--radius-md:8px}
+*,*::before,*::after{box-sizing:border-box;margin:0}html{overflow-x:clip;-webkit-font-smoothing:antialiased}body{font-family:var(--font-body);color:var(--color-ink);background:var(--color-paper);line-height:1.6}a{color:inherit;text-decoration:none}h1,h2,h3{font-family:var(--font-display);font-weight:400;font-style:normal;line-height:1.15}
+
+/* Shared nav */
+.util-bar{background:var(--color-dark);font-size:var(--text-xs)}.util-inner{max-width:1240px;margin:0 auto;padding:6px var(--space-lg);display:flex;align-items:center;justify-content:space-between}.util-portals{display:flex;gap:var(--space-sm);align-items:center}.util-portals span{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:oklch(55% 0.01 220);margin-right:var(--space-sm)}.p-pill{font-size:0.7rem;font-weight:500;padding:2px 10px;border-radius:100px;color:oklch(68% 0.01 220)}.p-pill--on{background:var(--color-accent);color:white}.p-pill--off{background:oklch(28% 0.02 220)}.lang{font-family:var(--font-mono);font-size:0.65rem;padding:2px 5px;border-radius:3px;color:oklch(60% 0.01 220)}.lang--on{color:white;background:oklch(32% 0.02 220)}
+.mega-nav{background:white;border-bottom:1px solid var(--color-rule);position:sticky;top:0;z-index:40}.mega-inner{max-width:1240px;margin:0 auto;padding:0 var(--space-lg);display:flex;align-items:center;justify-content:space-between;height:64px}.brand{display:flex;align-items:center;gap:var(--space-md)}.brand-icon{width:36px;height:36px;background:var(--color-accent);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center}.brand-icon svg{width:20px;height:20px;color:white}.brand-text h2{font-family:var(--font-display);font-size:var(--text-xl);line-height:1.1}.brand-text small{font-family:var(--font-mono);font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-ink-3)}.nav-links{display:flex;align-items:center;gap:var(--space-xl)}.nav-links a{font-size:var(--text-sm);font-weight:500;color:var(--color-ink-2)}.nav-links a:hover{color:var(--color-ink)}.nav-links a.active{color:var(--color-accent)}.nav-cta{font-size:var(--text-sm);font-weight:600;background:var(--color-accent);color:white;padding:8px 20px;border:none;border-radius:var(--radius-sm);cursor:pointer}
+
+/* Page header */
+.page-head{background:var(--color-dark);color:white;padding:var(--space-2xl) 0}
+.page-head-inner{max-width:1240px;margin:0 auto;padding:0 var(--space-lg)}
+.page-head h1{font-size:var(--text-3xl);margin-bottom:var(--space-xs)}
+.page-head p{color:oklch(70% 0.01 220);font-size:var(--text-base)}
+
+/* Tabs */
+.tabs{background:white;border-bottom:1px solid var(--color-rule);position:sticky;top:64px;z-index:30}
+.tabs-inner{max-width:1240px;margin:0 auto;padding:0 var(--space-lg);display:flex;gap:var(--space-2xl)}
+.tab{padding:var(--space-md) 0;font-size:var(--text-sm);font-weight:500;color:var(--color-ink-3);border-bottom:2px solid transparent;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:var(--font-body)}
+.tab--on{color:var(--color-accent);border-bottom-color:var(--color-accent);font-weight:600}
+
+/* Filters */
+.container{max-width:1240px;margin:0 auto;padding:0 var(--space-lg)}
+.filters{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-sm);padding:var(--space-xl) 0}
+.filters span{font-size:var(--text-sm);color:var(--color-ink-3);font-weight:500;margin-right:var(--space-sm)}
+.fbtn{font-family:var(--font-body);font-size:var(--text-xs);font-weight:500;padding:5px 14px;border-radius:100px;border:1px solid var(--color-rule);background:white;color:var(--color-ink-2);cursor:pointer;transition:all var(--dur-fast) var(--ease-out)}
+.fbtn:hover{border-color:var(--color-ink-3)}
+.fbtn--on{background:var(--color-accent);color:white;border-color:var(--color-accent)}
+.search-box{margin-left:auto;position:relative}
+.search-box input{font-family:var(--font-body);font-size:var(--text-sm);border:1px solid var(--color-rule);padding:7px 14px 7px 36px;border-radius:var(--radius-sm);width:240px;background:white}
+.search-box input:focus{outline:none;border-color:var(--color-accent)}
+.search-box svg{position:absolute;left:10px;top:9px;width:16px;height:16px;color:var(--color-ink-3)}
+
+/* Featured pair */
+.featured{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg);padding-bottom:var(--space-2xl);border-bottom:1px solid var(--color-rule)}
+.feat{border:1px solid var(--color-rule);border-radius:var(--radius-md);overflow:hidden;transition:border-color var(--dur-med) var(--ease-out)}
+.feat:hover{border-color:var(--color-ink-3)}
+.feat-img{aspect-ratio:16/9;background:var(--color-paper-alt);display:flex;align-items:center;justify-content:center}
+.feat-img span{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-ink-3);text-transform:uppercase;letter-spacing:0.05em}
+.feat-body{padding:var(--space-lg)}
+.feat-meta{display:flex;align-items:center;gap:var(--space-sm);margin-bottom:var(--space-sm)}
+.feat-badge{font-family:var(--font-mono);font-size:0.6rem;padding:2px 8px;border-radius:var(--radius-sm)}
+.feat-badge--fbit{background:var(--color-accent-soft);color:var(--color-accent)}
+.feat-badge--parcbit{background:oklch(93% 0.035 155);color:oklch(38% 0.1 155)}
+.feat-time{font-family:var(--font-mono);font-size:0.6rem;color:var(--color-ink-3)}
+.feat h3{font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:var(--space-sm);line-height:1.25}
+.feat p{font-size:var(--text-sm);color:var(--color-ink-2);line-height:1.55}
+
+/* News grid */
+.news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-lg);padding:var(--space-2xl) 0}
+.ncard{border-bottom:1px solid var(--color-rule);padding-bottom:var(--space-lg);transition:border-color var(--dur-fast) var(--ease-out)}
+.ncard:hover{border-color:var(--color-accent)}
+.ncard-img{aspect-ratio:4/3;background:var(--color-paper-alt);border-radius:var(--radius-sm);margin-bottom:var(--space-md);border:1px solid var(--color-rule)}
+.ncard-meta{display:flex;align-items:center;gap:var(--space-sm);margin-bottom:var(--space-sm)}
+.ncard-badge{font-family:var(--font-mono);font-size:0.55rem;padding:2px 7px;border-radius:var(--radius-sm)}
+.ncard-badge--c{background:oklch(93% 0.025 290);color:oklch(38% 0.07 290)}
+.ncard-badge--e{background:oklch(94% 0.035 65);color:oklch(42% 0.1 65)}
+.ncard-badge--t{background:var(--color-accent-soft);color:var(--color-accent)}
+.ncard-badge--p{background:oklch(93% 0.035 155);color:oklch(38% 0.1 155)}
+.ncard time{font-family:var(--font-mono);font-size:0.55rem;color:var(--color-ink-3)}
+.ncard h3{font-family:var(--font-body);font-size:var(--text-sm);font-weight:600;line-height:1.4;color:var(--color-ink)}
+.ncard:hover h3{color:var(--color-accent)}
+
+/* Pagination */
+.pager{display:flex;align-items:center;justify-content:center;gap:var(--space-sm);padding:var(--space-xl) 0 var(--space-3xl)}
+.pg{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid var(--color-rule);border-radius:var(--radius-sm);font-size:var(--text-sm);font-weight:500;color:var(--color-ink-2);background:white;cursor:pointer}
+.pg:hover{border-color:var(--color-ink-3)}
+.pg--on{background:var(--color-accent);color:white;border-color:var(--color-accent)}
+
+/* Newsletter CTA */
+.nl{background:var(--color-dark);padding:var(--space-3xl) 0}
+.nl-inner{max-width:1240px;margin:0 auto;padding:0 var(--space-lg);display:flex;align-items:center;justify-content:space-between;gap:var(--space-2xl)}
+.nl h2{font-size:var(--text-2xl);color:white;margin-bottom:var(--space-xs)}
+.nl p{font-size:var(--text-sm);color:oklch(65% 0.01 220);max-width:36ch}
+.nl-form{display:flex;gap:var(--space-sm)}
+.nl-form input{font-family:var(--font-body);font-size:var(--text-sm);background:oklch(28% 0.02 220);border:1px solid oklch(35% 0.02 220);color:white;padding:10px 16px;border-radius:var(--radius-sm);width:280px}
+.nl-form input::placeholder{color:oklch(50% 0.01 220)}
+.nl-form input:focus{outline:none;border-color:var(--color-accent)}
+.nl-form button{font-family:var(--font-body);font-size:var(--text-sm);font-weight:600;background:var(--color-accent);color:white;padding:10px 20px;border:none;border-radius:var(--radius-sm);cursor:pointer}
+.nl-form button:hover{background:var(--color-accent-hover)}
+.nl-note{font-family:var(--font-mono);font-size:0.6rem;color:oklch(45% 0.01 220);margin-top:var(--space-sm)}
+
+.chat-btn{position:fixed;bottom:var(--space-xl);right:var(--space-xl);z-index:50;width:50px;height:50px;border-radius:50%;background:var(--color-accent);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px oklch(0% 0 0 / 0.12)}.chat-btn:hover{transform:scale(1.05)}.chat-btn svg{width:22px;height:22px}
+
+@media(max-width:768px){.nav-links{display:none}.featured{grid-template-columns:1fr}.news-grid{grid-template-columns:1fr 1fr}.nl-inner{flex-direction:column;text-align:center}.nl-form{flex-direction:column;width:100%}.nl-form input{width:100%}.search-box{margin-left:0;width:100%}.search-box input{width:100%}}
+@media(max-width:480px){.news-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div class="util-bar"><div class="util-inner"><div class="util-portals"><span>Ecosistema</span><a href="01_portada_multisite.html" class="p-pill p-pill--on">Fundaci&oacute; BIT</a><a href="#" class="p-pill p-pill--off">ParcBIT</a><a href="#" class="p-pill p-pill--off">CentreBIT</a><a href="#" class="p-pill p-pill--off">EmprenBIT</a></div><div style="display:flex;gap:8px"><a href="#" class="lang lang--on">CA</a><a href="#" class="lang">ES</a><a href="#" class="lang">EN</a></div></div></div>
+
+<header class="mega-nav"><div class="mega-inner"><div class="brand"><div class="brand-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="brand-text"><h2>Fundaci&oacute; BIT</h2><small>Balears Innovation &amp; Technology</small></div></div><nav class="nav-links"><a href="01_portada_multisite.html">Inici</a><a href="#">Qui som</a><a href="#">Serveis</a><a href="02_pagina_proyecto.html">Projectes</a><a href="#" class="active">Actualitat</a><a href="#">Transpar&egrave;ncia</a><button class="nav-cta">Contacte</button></nav></div></header>
+
+<div class="page-head"><div class="page-head-inner"><h1>Actualitat</h1><p>Not&iacute;cies, esdeveniments i activitats de l'ecosistema d'innovaci&oacute; balear</p></div></div>
+
+<div class="tabs"><div class="tabs-inner"><button class="tab tab--on">Not&iacute;cies</button><button class="tab">Agenda d'activitats</button></div></div>
+
+<div class="container">
+  <div class="filters">
+    <span>Filtrar:</span>
+    <button class="fbtn fbtn--on">Tots</button>
+    <button class="fbtn">Fundaci&oacute; BIT</button>
+    <button class="fbtn">ParcBIT</button>
+    <button class="fbtn">CentreBIT</button>
+    <button class="fbtn">EmprenBIT</button>
+    <div class="search-box">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <input type="text" placeholder="Cercar not&iacute;cies...">
+    </div>
+  </div>
+
+  <div class="featured">
+    <a href="#" class="feat">
+      <div class="feat-img"><span style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em">Fotografia</span></div>
+      <div class="feat-body">
+        <div class="feat-meta"><span class="feat-badge feat-badge--fbit">Innovaci&oacute;</span><span class="feat-time">25 set 2026</span></div>
+        <h3>La Fundaci&oacute; BIT incorpora IA generativa al desenvolupament de software per al Govern</h3>
+        <p>L'aplicaci&oacute; d'eines d'IA ha perm&egrave;s millorar els processos de BITCITA, RESCAB i la Carpeta Ciutadana.</p>
+      </div>
+    </a>
+    <a href="#" class="feat">
+      <div class="feat-img"><span style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em">Fotografia</span></div>
+      <div class="feat-body">
+        <div class="feat-meta"><span class="feat-badge feat-badge--parcbit">ParcBIT</span><span class="feat-time">14 set 2026</span></div>
+        <h3>5 cl&uacute;sters estrat&egrave;gics s'instal&middot;len a l'Edifici Disset del ParcBIT</h3>
+        <p>BIOIB, CliQIB, ConstruLab360, Balearic Marine Cluster i TEIB amb un estalvi de 45.900 &euro;/any.</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="news-grid">
+    <a href="#" class="ncard">
+      <div class="ncard-img"></div>
+      <div class="ncard-meta"><span class="ncard-badge ncard-badge--c">CentreBIT Eivissa</span><span class="ncard time">ago 2026</span></div>
+      <h3>CentreBIT Eivissa tanca el primer any amb 7 projectes empresarials</h3>
+    </a>
+    <a href="#" class="ncard">
+      <div class="ncard-img"></div>
+      <div class="ncard-meta"><span class="ncard-badge ncard-badge--t">Tecnologia</span><span class="ncard time">jul 2026</span></div>
+      <h3>Primer centre de supercomputaci&oacute; i IA a les Balears: Talaia</h3>
+    </a>
+    <a href="#" class="ncard">
+      <div class="ncard-img"></div>
+      <div class="ncard-meta"><span class="ncard-badge ncard-badge--c">CentreBIT Menorca</span><span class="ncard time">jul 2026</span></div>
+      <h3>El FabLab de Menorca duplica el seu espai</h3>
+    </a>
+    <a href="#" class="ncard">
+      <div class="ncard-img"></div>
+      <div class="ncard-meta"><span class="ncard-badge ncard-badge--e">EmprenBIT</span><span class="ncard time">feb 2026</span></div>
+      <h3>5 projectes balears finalistes dels premis EmprendeXXI</h3>
+    </a>
+    <a href="#" class="ncard">
+      <div class="ncard-img"></div>
+      <div class="ncard-meta"><span class="ncard-badge ncard-badge--t">Internacional</span><span class="ncard time">mar 2026</span></div>
+      <h3>Presentaci&oacute; de Besso Digital al 4YFN de Barcelona</h3>
+    </a>
+    <a href="#" class="ncard">
+      <div class="ncard-img"></div>
+      <div class="ncard-meta"><span class="ncard-badge ncard-badge--p">ParcBIT</span><span class="ncard time">feb 2026</span></div>
+      <h3>Pla d'Atracci&oacute; del ParcBIT: 68M EUR fins al 2030</h3>
+    </a>
+  </div>
+
+  <div class="pager">
+    <span class="pg pg--on">1</span><span class="pg">2</span><span class="pg">3</span><span class="pg">...</span><span class="pg">12</span><span class="pg"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+  </div>
+</div>
+
+<div class="nl">
+  <div class="nl-inner">
+    <div><h2>Subscriu-te al butllet&iacute;</h2><p>Rep les not&iacute;cies m&eacute;s destacades de l'ecosistema d'innovaci&oacute; balear al teu correu.</p><p class="nl-note">Enviat a trav&eacute;s d'Acrelia News. Cancel&middot;la en qualsevol moment.</p></div>
+    <div>
+      <div class="nl-form"><input type="email" placeholder="El teu correu electr&ograve;nic"><button>Subscriure'm</button></div>
+    </div>
+  </div>
+</div>
+
+<button class="chat-btn" aria-label="Obrir assistent virtual"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></button>
+</body>
+</html>
