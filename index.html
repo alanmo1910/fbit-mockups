@@ -1,50 +1,37 @@
 <!DOCTYPE html><html lang="ca"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prototip navegable v2 · Portal multisite Fundació BIT (CMBIT1226)</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<title>Prototip navegable · Portal multisite Fundació BIT (CMBIT1226)</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:oklch(20% .02 220);background:oklch(97% .006 220);line-height:1.55}
-a{color:inherit;text-decoration:none}.w{max-width:1080px;margin:0 auto;padding:48px 24px 72px}
-h1{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:2.5rem;line-height:1.1}
-.sub{color:oklch(40% .015 220);margin-top:8px;max-width:70ch}
-.meta{font-family:"Space Mono",monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:oklch(45% .1 220);margin-bottom:14px;font-weight:700}
-.glob{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0 36px}
-.glob div{background:#fff;border:1px solid oklch(90% .008 220);border-radius:10px;padding:14px 16px;font-size:.86rem}
-.glob b{display:block;font-size:.95rem;margin-bottom:2px}
-.row{display:grid;grid-template-columns:56px 1fr 190px;gap:20px;background:#fff;border:1px solid oklch(90% .008 220);border-radius:12px;padding:22px;margin-bottom:14px;align-items:start}
-.num{font-family:"DM Serif Display",serif;font-size:2.2rem;color:oklch(48% .16 220);line-height:1}
-.row h2{font-size:1.15rem;margin-bottom:8px}
-.row li{font-size:.9rem;color:oklch(35% .015 220);margin:4px 0 4px 18px}
-.links{display:flex;flex-direction:column;gap:8px}
-.b{display:block;text-align:center;font-weight:700;font-size:.88rem;padding:10px 14px;border-radius:6px;background:oklch(48% .16 220);color:#fff}
-.b:hover{background:oklch(41% .16 220)}.b.o{background:#fff;color:oklch(20% .02 220);border:1.5px solid oklch(85% .01 220)}.b.o:hover{border-color:oklch(50% .01 220)}
-.b.dis{background:oklch(95% .006 220);color:oklch(48% .01 220);font-weight:600}
-.tips{background:oklch(22% .025 220);color:#fff;border-radius:12px;padding:22px 24px;margin-top:28px}
-.tips h2{font-family:"DM Serif Display",serif;font-weight:400;font-size:1.4rem;margin-bottom:10px}
-.tips li{margin:5px 0 5px 18px;font-size:.9rem;color:oklch(88% .01 220)}
-kbd{font-family:"Space Mono",monospace;background:oklch(32% .02 220);border-radius:4px;padding:1px 6px;font-size:.8rem}
-.note{font-size:.8rem;color:oklch(45% .01 220);margin-top:22px}
-a:focus-visible{outline:3px solid oklch(48% .16 220);outline-offset:3px}
-@media(max-width:760px){.glob{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr}.num{font-size:1.6rem}}
-</style></head><body><main class="w">
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:oklch(20% .02 220);background:oklch(97% .006 220);line-height:1.55}
+a{color:inherit;text-decoration:none}
+.w{max-width:900px;margin:0 auto;padding:48px 24px 72px}
+h1{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:2.2rem;line-height:1.15;margin-bottom:8px}
+.sub{color:oklch(42% .015 220);font-size:.95rem;max-width:60ch;margin-bottom:32px}
+.meta{font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:oklch(48% .16 220);font-weight:700;margin-bottom:12px}
+.card{display:block;background:#fff;border:1px solid oklch(90% .008 220);border-radius:10px;padding:20px 24px;margin-bottom:10px;transition:border-color .15s ease}
+.card:hover{border-color:oklch(48% .16 220)}
+.card h2{font-family:"Plus Jakarta Sans",sans-serif;font-size:1.05rem;font-weight:600;margin-bottom:4px}
+.card p{font-size:.85rem;color:oklch(42% .015 220)}
+.num{font-family:"DM Serif Display",serif;font-size:1.8rem;color:oklch(48% .16 220);float:left;margin-right:16px;line-height:1}
+.foot{font-size:.75rem;color:oklch(55% .01 220);margin-top:32px;padding-top:16px;border-top:1px solid oklch(90% .008 220)}
+a:focus-visible{outline:3px solid oklch(48% .16 220);outline-offset:3px;border-radius:6px}
+</style></head><body>
+<div class="w">
 <p class="meta">Expedient CMBIT1226 · Insurechain S.L. (ChangeTheBlock)</p>
-<h1>Portal multisite Fundació BIT<br>Prototip navegable · versió 2</h1>
-<p class="sub">Comparativa entre la primera versió dels mockups (v1, estàtica) i la versió 2 (interactiva). Cada pantalla es pot obrir en les dues versions.</p>
-<div class="glob">
-<div><b>Interactiu de debò</b>Filtres, pestanyes, mapa, reserves, comparador, cercador i assistent funcionen.</div>
-<div><b>Multisite visible</b>Selector de portals operatiu i portal ParcBIT amb la seva identitat.</div>
-<div><b>Accessibilitat AA</b>Salt al contingut, landmarks, focus visible, ARIA, teclat i contrast revisat.</div>
-<div><b>Sense marcadors buits</b>Imatges il·lustrades pròpies i continguts d'exemple coherents.</div>
-</div>
-<article class="row"><div class="num">01</div><div class="main"><h2>Portada principal del multisite</h2><ul><li>Selector de perfil funcional (empresa, emprenedor, ciutadà, institució) que reordena els accessos</li><li>Mapa de les Balears amb els 3 hubs clicables, sincronitzat amb les targetes</li><li>Carrusel de destacats accessible (pausa amb moviment reduït) i imatges il·lustrades en lloc de caixes grises</li><li>Cercador global semàntic (tecla /) amb filtre per portal i resposta ràpida IA</li></ul></div>
-<div class="links"><a class="b o" href="../01_portada_multisite.html">Veure v1</a><a class="b" href="01_portada.html">Obrir v2 →</a></div></article><article class="row"><div class="num">02</div><div class="main"><h2>Pàgina de projecte</h2><ul><li>Eliminats tots els textos entre claudàtors ([Nom del projecte], [Import]…)</li><li>Mostra la publicació creuada: el mateix contingut publicat a Fundació BIT i ParcBIT</li><li>Calendari de fites, indicadors de resultats, socis, documents accessibles i dades obertes</li><li>Galeria amb visor ampliat (teclat), compartir i formulari de contacte amb l'àrea (CRM)</li></ul></div>
-<div class="links"><a class="b o" href="../02_pagina_proyecto.html">Veure v1</a><a class="b" href="02_pagina_projecte.html">Obrir v2 →</a></div></article><article class="row"><div class="num">03</div><div class="main"><h2>Actualitat i agenda</h2><ul><li>Pestanyes Notícies / Agenda funcionals (accessibles amb fletxes)</li><li>Filtres reals per portal, categoria i cerca, amb recompte de resultats</li><li>Agenda amb calendari, filtres per illa (inclosa Formentera, Estatal, UE i virtual), format i temàtica</li><li>Fitxa d'activitat amb inscripció, retransmissió en directe, exportació .ics real i esdeveniments importats per scraping marcats</li></ul></div>
-<div class="links"><a class="b o" href="../03_noticies_events.html">Veure v1</a><a class="b" href="03_actualitat_agenda.html">Obrir v2 →</a></div></article><article class="row"><div class="num">04</div><div class="main"><h2>Directori d'empreses amb mapa</h2><ul><li>Mapes reals: costa de les Illes i plànol del ParcBIT dibuixats amb geometria d'OpenStreetMap (edificis, carrers i aparcaments P1–P4 reals)</li><li>Canvi de mapa base: Plànol (funciona sense connexió), Carrers (OpenStreetMap) i Satèl·lit (ortofoto PNOA de l'IGN)</li><li>Plànol per plantes del CentreBIT Menorca i capa de parcel·les per estat</li><li>Capes: empreses, sales, serveis i mobilitat real (metro M1, bus 19, taxis, recàrrega a P4, aparcabicis)</li><li>Llistat i mapa sincronitzats, cerca i filtres per sector, ubicació i incubades EmprenBIT</li><li>Fitxa d'empresa editada per la pròpia empresa (extranet) amb aprovació de l'administrador</li></ul></div>
-<div class="links"><a class="b o" href="../04_directori_mapa.html">Veure v1</a><a class="b" href="04_directori_mapa.html">Obrir v2 →</a></div></article><article class="row"><div class="num">05</div><div class="main"><h2>Portal ParcBIT (nou)</h2><ul><li>Demostra el multisite: mateixa plantilla i backoffice, amb color i continguts propis</li><li>Espais disponibles amb comparador (fins a 3) i sol·licitud de visita</li><li>Reserva de sales amb franges ocupades i aprovació del gestor</li><li>Plànol real per perfil de visitant, «Com arribar» amb les dades oficials (M1, EMT 19, Ma-20/Ma-1130, carril bici) i codis QR</li></ul></div>
-<div class="links"><span class="b dis">No existia a v1</span><a class="b" href="05_portal_parcbit.html">Obrir v2 →</a></div></article>
-<section class="tips"><h2>Com provar-lo en 2 minuts</h2><ul>
-<li>Prem <kbd>/</kbd> a qualsevol pantalla per obrir el cercador global i escriu «oficina a Menorca?».</li>
-<li>Obre l'assistent «Pregunta'ns» (a baix a la dreta) i tria una pregunta suggerida: respon citant les fonts del portal.</li>
-<li>Canvia l'idioma a ES o EN a la barra superior (simula la traducció amb IA revisada per l'editor).</li>
-<li>Navega només amb el teclat (<kbd>Tab</kbd>, <kbd>Enter</kbd>, fletxes, <kbd>Esc</kbd>).</li>
-<li>Redueix l'amplada de la finestra per veure la versió mòbil.</li></ul></section>
-<p class="note">Continguts il·lustratius. Les dades, textos i imatges reals es migraran a la fase de Discovery. Mapes: © OpenStreetMap contributors (ODbL) i ortofoto PNOA © Instituto Geográfico Nacional. Carrers i satèl·lit requereixen connexió; el plànol funciona sense. A producció, les tipografies s'allotgen al mateix servidor.</p>
-</main></body></html>
+<h1>Portal multisite Fundaci&oacute; BIT</h1>
+<p class="sub">Prototip navegable del nou portal web. Cinc vistes interactives amb filtres, mapa real, assistent virtual i demostraci&oacute; multisite.</p>
+
+<a href="01_portada.html" class="card"><span class="num">01</span><h2>Portada principal</h2><p>Selector de perfil, mapa de les Illes Balears amb els 3 hubs, agenda, not&iacute;cies, serveis i assistent virtual.</p></a>
+
+<a href="02_pagina_projecte.html" class="card"><span class="num">02</span><h2>P&agrave;gina de projecte</h2><p>Fitxa completa amb publicaci&oacute; creuada, calendari de fites, galeria, documents i contacte amb l'&agrave;rea.</p></a>
+
+<a href="03_actualitat_agenda.html" class="card"><span class="num">03</span><h2>Actualitat i agenda</h2><p>Not&iacute;cies filtrades per portal, agenda amb calendari, filtres per illa i format, inscripci&oacute; i exportaci&oacute; .ics.</p></a>
+
+<a href="04_directori_mapa.html" class="card"><span class="num">04</span><h2>Directori d'empreses amb mapa</h2><p>Mapa real amb OpenStreetMap, plantes del CentreBIT Menorca, capes de mobilitat, cerca i filtres.</p></a>
+
+<a href="05_portal_parcbit.html" class="card"><span class="num">05</span><h2>Portal ParcBIT</h2><p>Demostraci&oacute; multisite: mateixa plataforma amb identitat visual pr&ograve;pia, espais, comparador i com arribar.</p></a>
+
+<p class="foot">Material complementari a la proposta t&egrave;cnica (Sobre 3). Insurechain S.L. &middot; Octubre 2026</p>
+</div></body></html>
